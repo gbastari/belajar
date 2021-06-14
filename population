@@ -1,0 +1,24 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int start_size;
+    do
+    {
+       start_size = get_int ("What's the start population size? Note:Minimal size shouldn't be less than 9! ");
+    }
+    while (start_size < 9);
+    int end_size;
+    do
+    {
+       end_size = get_int ("What's the end population size? Note:Should be bigger than start size! ");
+    }
+    while (end_size < start_size);
+    for (int year = 0, start_size = end_size, year++)
+    {
+    
+    start_size = start_size + (start_size/3) - (end_size/4);
+    }
+    printf ("Year: %i",year);
+}
